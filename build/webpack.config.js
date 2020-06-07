@@ -6,7 +6,7 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
-const ENV = process.env.NODE_ENV || "development";
+const ENV = process.env.NODE_ENV || "production";
 
 console.log("打包环境===", ENV);
 
