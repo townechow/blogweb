@@ -18,7 +18,7 @@ module.exports = {
 
     },
     output: {
-        publicPath: './',
+        publicPath: '/',
         path: path.resolve(__dirname, '../dist/'),
         filename: 'js/[name].[hash:6].js',
         chunkFilename: 'js/[name].[hash:6].js'
@@ -86,7 +86,7 @@ module.exports = {
             filename: "[name].[contenthash:6].css",
             chunkFilename: "chunk/[id].[contenthash:6].css"
         }),
-        new CleanWebpackPlugin() //不传参默认清除output.path
+        // new CleanWebpackPlugin() //不传参默认清除output.path
     ],
     optimization: { // 提取公共代码
         splitChunks: {
@@ -106,4 +106,18 @@ module.exports = {
             }
         }
     },
+    devServer: {
+        contentBase: "./dist",
+        port: 8092,
+        hot: true,
+        compress: true,
+        host: "localhost",
+        disableHostCheck: true,
+        historyApiFallback: true,
+        overlay: {
+            errors: true,
+            warnings: false
+        }
+    },
+
 }
