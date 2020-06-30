@@ -11,7 +11,21 @@ import {
 } from "redux-logger";
 
 function store(initialState) {
+<<<<<<< HEAD
   
+=======
+  // from storage get token then set in redux
+  //修改
+  // const token = "";
+  // if (token) {
+  //   initialState = Object.assign({}, initialState, {
+  //     loginReducer: {
+  //       token
+  //     }
+  //   });
+  // }
+
+>>>>>>> 12b07ae79bfc1311668b6d76bd29a854765fa4cb
   let createStoreWithMiddleware;
   console.log(process.env.NODE_ENV, "process.env.NODE_ENV")
   if (process.env.NODE_ENV == "production" || process.env.NODE_ENV == undefined) {

@@ -1,8 +1,12 @@
 import React from "react";
-
+import Header from '../header/index.jsx';
+import Detail from '../detail/index.jsx';
+import Classify from '../classify/index.jsx';
+import Footer from '../footer/index.jsx';
+import Right from '../right/index.jsx';
 
 // import  style from './style.less';
-import   './style.less';
+import './style.less';
 // import   './style.css';
 
 
@@ -25,9 +29,14 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home-body">
-                <div>导航</div>
-                <div>分类</div>
-                <div>列表</div>
+                <Header />
+                <div className="main">
+                    <Classify />
+
+                    <Detail />
+                    <Right />
+                </div>
+                <Footer />
             </div>
         );
     }
