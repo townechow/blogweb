@@ -13,14 +13,14 @@ import {
 function store(initialState) {
   // from storage get token then set in redux
   //修改
-  const token = "";
-  if (token) {
-    initialState = Object.assign({}, initialState, {
-      loginReducer: {
-        token
-      }
-    });
-  }
+  // const token = "";
+  // if (token) {
+  //   initialState = Object.assign({}, initialState, {
+  //     loginReducer: {
+  //       token
+  //     }
+  //   });
+  // }
 
   let createStoreWithMiddleware;
   console.log(process.env.NODE_ENV, "process.env.NODE_ENV")
