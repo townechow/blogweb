@@ -1,10 +1,40 @@
 .classify-box {
     text-align: center;
-    .classify-list-item{
-        font-size: 20px;
-        cursor: pointer;
-        &:hover{
-            color: blue;
+
+    .classify-list-item {
+        font-size    : 20px;
+        cursor       : pointer;
+        padding      : 10px 20px;
+        border-bottom: 1px dotted #dcdcdc;
+
+        &:hover {
+            color     : blue;
+            opacity   : 0.5;
+            background: hsla(0, 0%, 100%, .2);
+        }
+    }
+
+    .active {
+        transform: scale(1.2);
+        color    : blue;
+        opacity  : 0.5;
+    }
+}
+
+.article-list {
+    background: hsla(0, 0%, 100%, .3);
+    padding   : 20px;
+
+    .article-item {
+        padding      : 10px 20px;
+        border-bottom: 1px dotted #dcdcdc;
+        font-size    : 16px;
+        cursor       : pointer;
+
+        &:hover {
+            color     : blue;
+            opacity   : 0.5;
+            background: hsla(0, 0%, 100%, .2);
         }
     }
 }

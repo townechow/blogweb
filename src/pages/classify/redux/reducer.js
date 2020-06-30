@@ -11,7 +11,7 @@ const classifyReducer = (state = initState, action) => {
                 ...state,
                 classifyList: action.data,
             };
-        case "ARTICLE_LISTL":
+        case "ARTICLE_LIST":
             return {
                 ...state,
                 articleList: action.data,

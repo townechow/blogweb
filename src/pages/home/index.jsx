@@ -1,7 +1,11 @@
+import { Route, Switch, withRouter } from "react-router-dom";
+
 import React from "react";
 import Header from '../header/index.jsx';
 import Detail from '../detail/index.jsx';
 import Classify from '../classify/index.jsx';
+import ArticleList from '../classify/articleList.jsx';
+
 import Footer from '../footer/index.jsx';
 import Right from '../right/index.jsx';
 
@@ -32,8 +36,18 @@ class Home extends React.Component {
                 <Header />
                 <div className="main">
                     <Classify />
-
-                    <Detail />
+                    <Switch>
+                        <Route
+                            exact
+                            path={`${this.props.match.url}/article/:id`}
+                            component={Detail}
+                        />
+                        <Route
+                            exact
+                            path={`${this.props.match.url}`}
+                            component={ArticleList}
+                        />
+                    </Switch>
                     <Right />
                 </div>
                 <Footer />
