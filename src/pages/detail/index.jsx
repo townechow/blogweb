@@ -47,11 +47,15 @@ class Detail extends React.Component {
         const { articleInfo = {} } = this.state;
         return (
             <div className="detail-box">
-                <head className="article-head">{articleInfo.title}</head>
-                <div className="article-info">{articleInfo.keyword}</div>
+                <h1 className="article-head">{articleInfo.title}</h1>
+                <div className="article-info">
+                    <div className="tag-list">
+                        <span className="tag">{articleInfo.keyword}</span>
+                    </div>
+                </div>
                 <div className="article-content"
                     dangerouslySetInnerHTML={{
-                        __html: `${articleInfo.content&&articleInfo.content.replace(/(\r\n)|(\n)/g, '<br/>')}`,
+                        __html: `${articleInfo.content && articleInfo.content.replace(/(\r\n)|(\n)/g, '<br/>')}`,
                     }}
                 />
                 <div className="page-nav"></div>

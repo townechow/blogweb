@@ -1,5 +1,42 @@
 .right-box {
-    // width: 100%;
-    // height: 140px;
-    background-color: yellow;
+    width        : 100%;
+    transition   : all .2s ease-in;
+    margin-right : 16px;
+    border-radius: 4px;
+    overflow     : hidden;
+
+    .top {
+        background: #4d4d4d;
+        width     : 100%;
+        height    : 100px
+    }
+
+    .buttom {
+        background: #fff;
+        width     : 100%;
+        text-align: center;
+        font-size : 14px;
+        padding   : 16px;
+
+        .avatar {
+            width        : 80px;
+            height       : 80px;
+            border-radius: 50%;
+            margin-top   : -56px;
+            position     : relative;
+        }
+
+        .name {}
+
+        .desc {
+            line-height: 1.2;
+            margin     : 16px 0;
+        }
+
+        .site {
+            a {
+                color: rgba(0, 0, 0, 0.65);
+            }
+        }
+    }
 }
