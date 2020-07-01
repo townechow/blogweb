@@ -1,43 +1,47 @@
 .classify-box {
-    text-align: center;
-    margin-left: 16px;
-    &::-webkit-scrollbar{
-        display: none;
-    }
-    .classify-list-item {
-        font-size    : 16px;
-        cursor       : pointer;
-        padding      : 6px 12px;
-        border-bottom: 1px dotted #dcdcdc;
+	text-align: center;
+	margin-left: 16px;
 
-        &:hover {
-            color     : blue;
-            opacity   : 0.5;
-            background: hsla(0, 0%, 100%, .2);
-        }
-    }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-    .active {
-        transform: scale(1.2);
-        color    : blue;
-        opacity  : 0.5;
-    }
+	.classify-list-item {
+		font-size: 16px;
+		cursor: pointer;
+		padding: 6px 12px;
+		border-bottom: 1px dotted #dcdcdc;
+
+		&:hover {
+			color: blue;
+			opacity: 0.5;
+			background: hsla(0, 0%, 100%, .2);
+		}
+	}
+
+	.active {
+		transform: scale(1.2);
+		color: blue;
+		opacity: 0.5;
+	}
 }
 
 .article-list {
-    background: hsla(0, 0%, 100%, .3);
-    padding   : 20px;
+	background: hsla(0, 0%, 100%, .3);
+	padding: 20px;
+	margin: 0 16px;
+	border-radius: 4px;
 
-    .article-item {
-        padding      : 10px 20px;
-        border-bottom: 1px dotted #dcdcdc;
-        font-size    : 16px;
-        cursor       : pointer;
+	.article-item {
+		padding: 10px 20px;
+		border-bottom: 1px dotted #dcdcdc;
+		font-size: 16px;
+		cursor: pointer;
 
-        &:hover {
-            color     : blue;
-            opacity   : 0.5;
-            background: hsla(0, 0%, 100%, .2);
-        }
-    }
+		&:hover {
+			color: blue;
+			opacity: 0.5;
+			background: hsla(0, 0%, 100%, .2);
+		}
+	}
 }

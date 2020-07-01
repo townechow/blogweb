@@ -22,7 +22,7 @@ class Classify extends React.Component {
         this.props.getClassifyList();
 
     }
-    
+
     getArticleList = (id) => {
         this.setState({
             activeId: id
@@ -39,9 +39,9 @@ class Classify extends React.Component {
         const { activeId = "" } = this.state;
         return (
             <div className="classify-box">
-                <div 
-                className={!activeId ? "active classify-list-item" : "classify-list-item"}
-                onClick={() => this.getArticleList("")}
+                <div
+                    className={!activeId ? "active classify-list-item" : "classify-list-item"}
+                    onClick={() => this.getArticleList("")}
                 >
                     <div >全部</div>
                 </div>
