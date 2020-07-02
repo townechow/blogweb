@@ -18,7 +18,6 @@ class Detail extends React.Component {
     }
 
     componentDidMount() {
-        console.log(" Detail 挂载完毕！");
         const id = this.props.match.params.id;
         this.getArticleDetail(id);
     }
@@ -38,7 +37,7 @@ class Detail extends React.Component {
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
             });
     }
 
@@ -46,20 +45,23 @@ class Detail extends React.Component {
         console.log("detail props==", this.props);
         const { articleInfo = {} } = this.state;
         return (
-            <div className="detail-box">
-                <h1 className="article-head">{articleInfo.title}</h1>
-                <div className="article-info">
-                    <div className="tag-list">
-                        <span className="tag">{articleInfo.keyword}</span>
+            !articleInfo.title ?
+                <div className="detail-box loading"> Loading...</div>
+                :
+                <div className="detail-box">
+                    <h1 className="article-head">{articleInfo.title}</h1>
+                    <div className="article-info">
+                        <div className="tag-list">
+                            <span className="tag">{articleInfo.keyword}</span>
+                        </div>
                     </div>
+                    <div className="article-content"
+                        dangerouslySetInnerHTML={{
+                            __html: `${articleInfo.content && articleInfo.content.replace(/(\r\n)|(\n)/g, '<br/>')}`,
+                        }}
+                    />
+                    <div className="page-nav"></div>
                 </div>
-                <div className="article-content"
-                    dangerouslySetInnerHTML={{
-                        __html: `${articleInfo.content && articleInfo.content.replace(/(\r\n)|(\n)/g, '<br/>')}`,
-                    }}
-                />
-                <div className="page-nav"></div>
-            </div>
         );
     }
 }

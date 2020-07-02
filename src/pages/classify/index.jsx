@@ -18,7 +18,6 @@ class Classify extends React.Component {
 
 
     componentDidMount() {
-        console.log("Classify 挂载完毕！");
         this.props.getClassifyList();
 
     }
