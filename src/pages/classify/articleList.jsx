@@ -24,17 +24,21 @@ class ArticleList extends Component {
         const { data = [] } = this.props.articleList
         return (
             <div className="article-list">
-                {data.map((item, index) => {
-                    return (
-                        <div
-                            key={item.id}
-                            className="article-item"
-                            onClick={() => this.toArticleDetail(item.id)}
-                        >
-                            {item.title}
-                        </div>
-                    )
-                })}
+                {data.length > 0 ?
+                    data.map((item, index) => {
+                        return (
+                            <div
+                                key={item.id}
+                                className="article-item"
+                                onClick={() => this.toArticleDetail(item.id)}
+                            >
+                                {item.title}
+                            </div>
+                        )
+                    })
+                    :
+                    <div className="no-data" >暂无数据~</div>
+                }
             </div>
         )
     }

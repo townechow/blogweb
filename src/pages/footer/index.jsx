@@ -19,7 +19,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer-box">
-                底部
+                <div>© 2019 小_飞鸡</div>
             </div>
         );
     }
