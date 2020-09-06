@@ -8,6 +8,7 @@ import ArticleList from '../classify/articleList.jsx';
 
 import Footer from '../footer/index.jsx';
 import Right from '../right/index.jsx';
+import selfIco from '../../static/xiao_feiji.ico';
 
 // import  style from './style.less';
 import './style.less';
@@ -27,6 +28,7 @@ class Home extends React.Component {
 
     componentDidMount() {
         console.log("Home 挂载完毕！");
+        document.querySelector("#self_icon").href = selfIco;
 
     }
 
