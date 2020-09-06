@@ -32,8 +32,8 @@ module.exports = {
   resolve: {
     extensions: [".js", ".json", ".jsx", ".css", ".less", ".ts"],
     alias: {
-      '@': './src',
-      '@pages': `./src/pages`,
+      '@': path.resolve(__dirname, "../src"),
+      '@pages': path.resolve(__dirname, "../src/pages"),
     },
   },
   module: {
@@ -63,7 +63,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
         loader: 'url-loader', // url-loader 依赖于 file-loader
         options: {
-          limit: false,
+          limit: 1000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
